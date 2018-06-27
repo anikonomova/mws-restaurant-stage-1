@@ -11,7 +11,7 @@ body {
 	background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
-	max-width: 1100px;
+	max-width: 1120px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -21,7 +21,7 @@ ul, li {
 	color: #333;
 }
 a {
-	color: orange;
+	color: green;
 	text-decoration: none;
 }
 a:hover, a:focus {
@@ -118,6 +118,7 @@ nav h1 a {
   background-color: black;
   align-items: center;
 	padding: 20px 10px;
+	max-width: 1100px
 }
 .filter-options h2 {
   color: white;
@@ -125,6 +126,7 @@ nav h1 a {
   font-weight: normal;
   line-height: 1;
   margin: 0 20px;
+	text-align: left;
 }
 .filter-options select {
   background-color: white;
@@ -146,7 +148,9 @@ nav h1 a {
   padding: 30px 15px 60px;
   text-align: center;
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -154,10 +158,12 @@ nav h1 a {
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
-  padding: 0 30px 25px;
+  padding: 0 5px 25px;
   text-align: left;
   min-width: 270px;
+	max-width: 300px;
 }
+
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
@@ -219,7 +225,7 @@ nav h1 a {
   width: 50%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: green;
   font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 200;
@@ -257,7 +263,7 @@ nav h1 a {
   padding: 30px 40px 80px;
 }
 #reviews-container h2 {
-  color: #f58500;
+  color: green;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -283,4 +289,28 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* ====================== Responsiveness ====================== */
+
+@media screen and (max-width: 480px) {
+	#restaurants-list li {
+		max-width: 100%;
+	}
+}
+
+@media screen and (min-width: 481px) {
+	#restaurants-list li {
+		max-width: 70%;
+}
+}
+@media screen and (min-width: 680px) {
+	#restaurants-list li {
+		max-width: 40%;
+}
+}
+@media screen and (min-width: 1000px) {
+	#restaurants-list li {
+		max-width: 27%;
+}
 }
