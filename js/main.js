@@ -4,6 +4,20 @@ let restaurants,
 var map
 var markers = []
 
+/* Adding the service worker*/
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+  .register('./sw.js', {scope: ''})
+  .then (function (reg) {
+    // registration is successful
+    console.log('ServiceWorker registered: ' + reg.scope);
+  })
+  .catch ( function (error) {
+    //registration failed
+    console.log('ServiceWorker registration failed: ' + error);
+  });
+}
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -81,6 +95,7 @@ window.initMap = () => {
     scrollwheel: false
   });
   updateRestaurants();
+   document.getElementById('map').tabIndex = '-1';
 }
 
 /**
