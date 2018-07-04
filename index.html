@@ -18,23 +18,20 @@
     </nav>
   </header>
 
-  <section id="map-container" aria-labelledby='map-aria-description'>
+  <section id="map-container" aria-label='map-application'>
     <div id="map" role='application'></div>
   </section>
-  <label id='map-aria-description' class="map-aria-description">Google map</label>
 
   <main id="maincontent"  tabindex="-1">
     <section>
       <div class="filter-options" tabindex='0'>
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" tabindex="0">
-          <option value="all">All Neighborhoods</option>
+ <select id="neighborhoods-select" aria-label="by neighborhood" name="neighborhoods" onchange="updateRestaurants()" tabindex="0">
+   <option value="all">All Neighborhoods</option>
         </select>
-        <label id='neighborhoods-label' class='select-label'>by neighborhood</label>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" tabindex='0'>
-          <option value="all">All Cuisines</option>
+ <select  id="cuisines-select" aria-label="by cuisines" name="cuisines" onchange="updateRestaurants()" tabindex="0">
+   <option value="all">All Cuisines</option>
         </select>
-        <label id='cuisines-label' class='select-label'>by cuisine</label>
 
       </div>
       <ul id="restaurants-list"></ul>
