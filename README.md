@@ -24,7 +24,7 @@ In a terminal, check the version of Python you have: python -V. If you have Pyth
 
     With your server running, visit the site: http://localhost:8000.
 
-##Contributing
+## Contributing
 
 This repository is the starter code for all Udacity students. Therefore, we most likely will not accept pull requests.
 
