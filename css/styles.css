@@ -22,7 +22,7 @@ ul, li {
 	color: #333;
 }
 a {
-	color: green;
+	color: #92f442;
 	text-decoration: none;
 }
 a:hover, a:focus {
@@ -39,6 +39,21 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+
+.skip-link {
+	position:absolute;
+	right:0;
+	background: green;
+	color: white;
+	z-index: 100;
+	padding: 1px;
+	top: -22px;
+}
+.skip-link:focus {
+	top:0;
+}
+
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
@@ -46,8 +61,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	flex-direction: column;
 }
 #footer {
-  background-color: #444;
-  color: #aaa;
+  background-color: black;
+  color: white;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -83,7 +98,7 @@ nav h1 a {
 		max-width: 100%;
 		min-width: 180px;
 		display: inline-block;
-		opacity: 0.5;
+		opacity: 0.2;
 }
 
 /* Display list items side by side */
@@ -172,7 +187,7 @@ nav h1 a {
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  min-height: 220px;
 }
 #restaurants-list li h2 {
   color: green;
